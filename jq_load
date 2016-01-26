@@ -1,27 +1,24 @@
 <!doctype html>
 <html>
   <head>
-  <script src="jquery.js"></script>
-  <script>
-  var imgArray = 
-["loc_portrait1.jpg",
-"loc_portrait2.jpg",
-"loc_portrait3.jpg",
-"loc_portrait4.jpg",
-"loc_portrait5.jpg"];
-
-var imgArrLength = imgArray.length;
-var i = 0;
-  for (i=0;i < imgArrLength;i++) {
-  console.log(i);
-   $('<img />').attr({'src':'images/'+imgArray[i], 'class':'img'+[i]}).load(function(){
-        $('.gallery').append($(this));
-    });
-  }
-  
-  
-
-  </script>
+    <script src="jquery.js"></script>
+    <script>
+      //使用数组存放变量，便于更改变量的值
+      var imgArray = 
+      ["loc_portrait1.jpg",
+      "loc_portrait2.jpg",
+      "loc_portrait3.jpg",
+      "loc_portrait4.jpg",
+      "loc_portrait5.jpg"];
+      var imgArrLength = imgArray.length;
+      var i = 0;
+      for (i=0;i < imgArrLength;i++) {
+        console.log(i);//用于观察加载图片的先后顺序
+        $('<img />').attr({'src':'images/'+imgArray[i], 'class':'img'+[i]}).load(function(){
+          $('.gallery').append($(this));//先创建img，加载完成后作为子元素添加到gallery中
+        });
+      }
+    </script>
   <body>
     <div class="container">
       <h1>Hello jQuery.</h1>
