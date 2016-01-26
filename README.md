@@ -1,2 +1,2 @@
 # jq_load
-use .load() for pictures' pre-loading
+the first time I use Github,and this file need to improve and perfect
